@@ -1,4 +1,6 @@
+#include <vscode_fix.h>
 #include <nds.h>
+#include <stdio.h>
 
 int main() 
 {
@@ -41,29 +43,29 @@ int main()
 		if(held & KEY_LEFT)
 			if(xPosition > 0)
 			{
-				xPosition = xPosition - 16;
+				xPosition = --xPosition;
 			}
 		if(held & KEY_RIGHT)
 			if(xPosition < 240)
 			{
-				xPosition = xPosition + 16;
+				xPosition = ++xPosition;
 			}
 		if(held & KEY_UP)
 			if(yPosition > 0)
 			{
-				yPosition = yPosition - 16;
+				yPosition = --yPosition;
 			}
 		if(held & KEY_DOWN)
 			if(yPosition < 176)
 			{
-				yPosition = yPosition + 16;
+				yPosition = ++yPosition;
 			}
 		if(held & KEY_A)
 		{
 			xPosition = 0;
 			yPosition = 0;
 		}
-
+	
     
 		oamSet(&oamMain, //main graphics engine context
 			0,           //oam index (0 to 127)  
