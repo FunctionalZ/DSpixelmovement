@@ -1,0 +1,4 @@
+build/main.d
+build/main.o
+build/DSpixelmovement.map
+DSpixelmovement.elf

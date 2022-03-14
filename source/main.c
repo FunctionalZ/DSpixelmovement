@@ -3,8 +3,8 @@
 int main() 
 {
     int i = 0;
-	int xPosition = 100;
-	int yPosition = 100;
+	int xPosition = 128;
+	int yPosition = 80;
 
 	videoSetMode(MODE_0_2D);
 
@@ -40,16 +40,24 @@ int main()
 			break;
 		if(held & KEY_LEFT)
 			if(xPosition > 0)
-				xPosition = --xPosition;
+			{
+				xPosition = xPosition - 16;
+			}
 		if(held & KEY_RIGHT)
 			if(xPosition < 240)
-				xPosition = ++xPosition;
+			{
+				xPosition = xPosition + 16;
+			}
 		if(held & KEY_UP)
 			if(yPosition > 0)
-				yPosition = --yPosition;
+			{
+				yPosition = yPosition - 16;
+			}
 		if(held & KEY_DOWN)
 			if(yPosition < 176)
-				yPosition = ++yPosition;
+			{
+				yPosition = yPosition + 16;
+			}
 		if(held & KEY_A)
 		{
 			xPosition = 0;
