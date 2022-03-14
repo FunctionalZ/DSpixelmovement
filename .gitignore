@@ -3,3 +3,4 @@ build/main.o
 build/DSpixelmovement.map
 DSpixelmovement.elf
 .vscode/tasks.json
+include/vscode_fix.h
